@@ -1,8 +1,8 @@
 {
-  "name": "nuvi-daterange-picker",
+  "name": "react-calendar-picker",
   "version": "1.2.6",
   "description": "A React based date range picker forked",
-  "author": "Nuvi <developers@nuvi.com> (http://www.nuvi.com)",
+  "author": "Narfdre <narfdre@gmail.com>",
   "license": "ISC",
   "scripts": {
     "prepare": "npm run build",
@@ -10,20 +10,20 @@
     "lint": "eslint src",
     "karma": "karma start karma.conf.js --browsers Firefox --single-run",
     "prepublish": "npm run clean && npm run build",
-    "clean": "rimraf lib",
-    "build": "npm run build:lib",
-    "build:lib": "babel src/ -d lib"
+    "clean": "rimraf dist",
+    "build": "npm run build:dist",
+    "build:dist": "babel src/ -d dist"
   },
-  "style": "./lib/css/react-calendar.css",
+  "style": "./dist/css/react-calendar.css",
   "files": [
-    "lib",
+    "dist",
     "src",
     "example"
   ],
   "engines": {
-    "node": ">=4.0"
+    "node": ">=8.0"
   },
-  "main": "lib/DateRangePicker.js",
+  "main": "./dist/DateRangePicker.js",
   "keywords": [
     "react",
     "datepicker",
@@ -34,7 +34,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/nuvi/nuvi-daterange-picker"
+    "url": "https://github.com/narfdre/react-calendar-picker"
   },
   "peerDependencies": {
     "react": "^15.3.2",
