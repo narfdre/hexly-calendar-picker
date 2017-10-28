@@ -12,3 +12,4 @@ dist/ui-coverage/
 lib/
 dev/
 npm-debug.log
+yarn.lock
