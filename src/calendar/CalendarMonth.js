@@ -28,6 +28,7 @@ class CalendarMonth extends BemMixin {
     onYearChange: PropTypes.func,
     value: CustomPropTypes.momentOrMomentRange,
     locale: PropTypes.string,
+    minimumDate: PropTypes.instanceOf(Date),
   };
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -132,9 +133,10 @@ class CalendarMonth extends BemMixin {
   };
 
   renderHeaderYear = () => {
-    let {firstOfMonth} = this.props;
+    let { firstOfMonth, minimumDate } = this.props;
     let y = firstOfMonth.year();
-    let years = Immutable.Range(y - 5, y).concat(Immutable.Range(y, y + 10));
+    const startYear = minimumDate ? minimumDate.getFullYear() : y - 5;
+    let years = Immutable.Range(startYear, y).concat(Immutable.Range(y, y + 10));
     let choices = years.map(this.renderYearChoice);
     let modifiers = {year: true};
     return (

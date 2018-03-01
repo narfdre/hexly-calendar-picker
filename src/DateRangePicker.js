@@ -524,6 +524,7 @@ class DateRangePicker extends BemMixin {
       dateRangesForDate: this.dateRangesForDate,
       dateComponent: CalendarDate,
       locale: this.props.locale,
+      minimumDate: this.props.minimumDate,
     };
 
     return <CalendarMonth {...props} />;
