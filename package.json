@@ -37,8 +37,8 @@
     "url": "https://github.com/narfdre/hexly-calendar-picker"
   },
   "peerDependencies": {
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react": "^15.3.2||^16",
+    "react-dom": "^15.3.2||^16"
   },
   "dependencies": {
     "calendar": "^0.1.0",
