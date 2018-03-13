@@ -1,6 +1,5 @@
-Nuvi Daterange Picker
+Hexly Calendar Picker
 ======================
-[![Build Status](https://travis-ci.org/nuvi/react-daterange-picker.svg?branch=master)](https://travis-ci.org/nuvi/react-daterange-picker)
 
 A React based date range picker. Forked from onefinestay/react-daterange-picker but that thing is way old.
 
@@ -13,9 +12,9 @@ A React based date range picker. Forked from onefinestay/react-daterange-picker 
 
 ## React Version
 
-As of version 1.0.0, the nuvi-daterange-picker component supports React 0.14. At this time React 0.15 is not supported.
+As of version 1.0.0, the hexly-calendar-picker component supports React 0.14. At this time React 0.15 is not supported.
 
-If you wish to user an older version of React, please use nuvi-daterange-picker v0.12.x or below.
+If you wish to user an older version of React, please use hexly-calendar-picker v0.12.x or below.
 
 
 ```shell
