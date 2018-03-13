@@ -1,29 +1,13 @@
 {
-  "ecmaFeatures": {
-    "arrowFunctions": true,
-    "binaryLiterals": false,
-    "blockBindings": true,
-    "classes": true,
-    "defaultParams": true,
-    "destructuring": true,
-    "forOf": false,
-    "generators": true,
-    "modules": true,
-    "objectLiteralComputedProperties": true,
-    "objectLiteralDuplicateProperties": false,
-    "objectLiteralShorthandMethods": true,
-    "objectLiteralShorthandProperties": true,
-    "octalLiterals": true,
-    "regexUFlag": true,
-    "regexYFlag": true,
-    "superInFunctions": false,
-    "templateStrings": true,
-    "unicodeCodePointEscapes": false,
-    "globalReturn": false,
-    "jsx": true
-  },
-
   "parser": "babel-eslint",
+
+  "parserOptions" : { 
+    "sourceType" : "module",
+    "ecmaVersion" : 6,
+    "ecmaFeatures" : { 
+      "jsx": true
+    }
+  },
 
   "plugins": [
     "react"
@@ -89,7 +73,7 @@
     "no-loop-func": 2,
     "no-mixed-requires": [1, true],
     "no-mixed-spaces-and-tabs": [2, false],
-    "no-multi-spaces": [2, { exceptions: { "VariableDeclarator": true } }],
+    "no-multi-spaces": [2, { "exceptions": { "VariableDeclarator": true } }],
     "no-multi-str": 2,
     "no-multiple-empty-lines": [0, {"max": 2}],
     "no-native-reassign": 2,
@@ -197,7 +181,6 @@
     "wrap-regex": 0,
     "yoda": [2, "never"],
 
-    // eslint-plugin-react rules
     "react/jsx-boolean-value": [1, "always"],
     "react/jsx-uses-react": 1,
     "react/jsx-uses-vars": 1,

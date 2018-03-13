@@ -7,9 +7,8 @@ module.exports = {
     filename: 'index.js',
   },
   resolve: {
-    modulesDirectories: ['node_modules'],
-    extensions: ['', '.js'],
-    root: [path.resolve(__dirname, 'src/')],
+    modules: [path.resolve(__dirname, 'src/'), 'node_modules'],
+    extensions: ['.js'],
   },
   eslint: {
     configFile: path.resolve(__dirname, '.eslintrc'),
@@ -25,10 +24,10 @@ module.exports = {
         loader: 'style-loader!css-loader!sass-loader',
         test: /\.scss$/,
       },
-    ],
-    postLoaders: [
-      { loader: 'transform/cacheable?brfs', test: /(example)(.*)\.jsx?$/ },
-    ],
+      {
+        loader: 'transform/cacheable?brfs', test: /(example)(.*)\.jsx?$/ 
+      }
+    ]
   },
   plugins: [],
 };

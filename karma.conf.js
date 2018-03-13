@@ -42,25 +42,25 @@ module.exports = function (config) {
     webpack: {
       devtool: 'inline-source-map', // just do inline source maps instead of the default
       module: {
-        loaders: [
-          {
+        rules: [
+	        {
             loader: 'babel-loader',
-            test: /\.jsx?$/,
-            exclude: /node_modules/,
+            test: /\.js?$/,
+            exclude: /node_modules/
           },
-        ],
-        postLoaders: [
           {
-            loader: 'istanbul-instrumenter',
+            loader: 'istanbul-instrumenter-loader',
             include: path.resolve('src/'),
-            test: /\.js$/,
+            test: /\.js$|\.jsx$/,
+            enforce: 'post',
+            exclude: /node_modules|\.spec\.js$/,
+	          options: { esModules: true }
           },
         ],
       },
       resolve: {
-        modulesDirectories: ['node_modules'],
-        extensions: ['', '.js'],
-        root: [path.resolve(__dirname, 'src/')],
+        modules: [path.resolve(__dirname, 'src/'), 'node_modules'],
+        extensions: ['.js'],
       },
     },
     webpackServer: {
